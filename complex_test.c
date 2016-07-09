@@ -12,6 +12,7 @@ void testScale();
 void testEquals();
 void testDivision();
 void testAbsolute();
+void testArgument();
 
 void test(){
 	testAdd();
@@ -21,6 +22,7 @@ void test(){
 	testEquals();
 	testDivision();
 	testAbsolute();
+	testArgument();
 	printf("All passed!\n");
 }
 
@@ -125,9 +127,17 @@ void testAbsolute(){
 	a.imag = 4;
 	
 	double abs = absolute(a);
-	double absResult = sqrt((double)272);
 
-	assert(abs == absResult);
+	assert(abs == sqrt((double)272));
+}
+
+void testArgument(){
+	printf("testArgument\n");
+	complex a;
+	a.real = 16;
+	a.imag = 4;
+
+	assert(argument(a) == atan2(4,16));
 }
 /*
 printf("%lf\n", c.real);

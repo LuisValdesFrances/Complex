@@ -17,5 +17,6 @@ complex scale(complex a, double scale);
 int equals(complex a, complex b);
 complex division(complex a, complex b);
 double absolute(complex a);
+double argument(complex a);
 
 #endif

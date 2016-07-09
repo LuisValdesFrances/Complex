@@ -72,3 +72,7 @@ double absolute(complex a){
 	double imag = pow(a.imag, 2);
 	return sqrt(real + imag);
 }
+
+double argument(complex a){
+	return atan2(a.imag, a.real);
+}

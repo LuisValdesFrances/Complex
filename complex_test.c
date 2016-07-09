@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <assert.h>
+#include <math.h>
 
 #include "complex_test.h"
 #include "complex.h"
@@ -10,6 +11,7 @@ void testMult();
 void testScale();
 void testEquals();
 void testDivision();
+void testAbsolute();
 
 void test(){
 	testAdd();
@@ -18,6 +20,7 @@ void test(){
 	testScale();
 	testEquals();
 	testDivision();
+	testAbsolute();
 	printf("All passed!\n");
 }
 
@@ -113,6 +116,18 @@ void testDivision(){
 	double i = -152 / (double)104;
 
 	assert(c.real == r && c.imag == i);
+}
+
+void testAbsolute(){
+	printf("testAbsolute\n");
+	complex a;
+	a.real = 16;
+	a.imag = 4;
+	
+	double abs = absolute(a);
+	double absResult = sqrt((double)272);
+
+	assert(abs == absResult);
 }
 /*
 printf("%lf\n", c.real);

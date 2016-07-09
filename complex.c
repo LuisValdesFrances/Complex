@@ -66,3 +66,9 @@ complex division(complex a, complex b) {
 
 	return result;
 }
+
+double absolute(complex a){
+	double real = pow(a.real, 2);
+	double imag = pow(a.imag, 2);
+	return sqrt(real + imag);
+}

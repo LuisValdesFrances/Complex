@@ -14,7 +14,7 @@ complex add(complex a, complex b);
 complex sub(complex a, complex b);
 complex mult(complex a, complex b);
 complex scale(complex a, double scale);
-complex mult(complex a, complex b);
 int equals(complex a, complex b);
+complex division(complex a, complex b);
 
 #endif

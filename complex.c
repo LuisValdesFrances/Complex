@@ -45,7 +45,7 @@ int equals(complex a, complex b) {
 	return (a.real == b.real) && (a.imag == b.imag);
 }
 
-complex div(complex a, complex b) {
+complex division(complex a, complex b) {
 
 	double dividend;
 	double divisor;

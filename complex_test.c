@@ -9,7 +9,7 @@ void testSub();
 void testMult();
 void testScale();
 void testEquals();
-void testDiv();
+void testDivision();
 
 void test(){
 	testAdd();
@@ -17,7 +17,7 @@ void test(){
 	testMult();
 	testScale();
 	testEquals();
-	testDiv();
+	testDivision();
 	printf("All passed!\n");
 }
 
@@ -96,8 +96,8 @@ void testEquals(){
 	assert(equals(a,c));
 }
 
-void testDiv(){
-	printf("testDiv\n");
+void testDivision(){
+	printf("testDivision\n");
 	complex a;
 	a.real = 16;
 	a.imag = 4;
@@ -107,8 +107,12 @@ void testDiv(){
 	b.imag = 10;
 
 	complex c;
-	c = div(a,b);
-	assert(c.real == (72/108) && c.imag == (152/108));
+	c = division(a,b);
+
+	double r = 72 / (double)104;
+	double i = -152 / (double)104;
+
+	assert(c.real == r && c.imag == i);
 }
 /*
 printf("%lf\n", c.real);

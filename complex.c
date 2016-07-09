@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 #include "complex.h"
 
 
@@ -41,6 +42,27 @@ complex scale(complex a, double scale) {
 }
 
 int equals(complex a, complex b) {
-	
 	return (a.real == b.real) && (a.imag == b.imag);
+}
+
+complex div(complex a, complex b) {
+
+	double dividend;
+	double divisor;
+	double realResult;
+	double imagResult;
+
+	divisor = pow(b.real, 2) + pow(b.imag, 2);
+	//real
+	dividend = (a.real * b.real) + (a.imag * b.imag);
+	realResult = dividend / divisor;
+	//imag
+	dividend = (a.imag * b.real) - (a.real * b.imag);
+	imagResult = dividend / divisor;
+	
+	complex result;
+	result.real = realResult;
+	result.imag = imagResult;
+
+	return result;
 }
